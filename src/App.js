@@ -1,27 +1,31 @@
 import {useRoutes} from "react-router-dom"
 import {routes} from "./routes"
-import {Home, Sun} from "./icons";
-
+import {Sun, LongLogo} from "./icons";
+import ChangeIcon from "./components/ChangeIcon";
 
 function App() {
 
   const showRoutes = useRoutes(routes)
 
   return (
-    <div className="h-screen w-full bg-bg">
+    <div className="h-screen w-full bg-bg overflow-x-hidden">
 
       <div className="container mx-auto">
-          <img src="Images/Logo/LongLogo.png" alt="logoImage"/>
 
-          {showRoutes}
+        <LongLogo className="w-32 ml-5"/>
 
-        <div className="flex flex-col gap-4 absolute bottom-3 left-5">
-            <h4 className="icons">EN</h4>
-            <Home className="icons"/>
+        {showRoutes}
+
+        <div className="flex gap-4 mt-5 absolute bottom-7 left-8 bg-bg">
+            <button className="icons">EN</button>
+            <ChangeIcon type="home"/>
             <Sun className="icons" />
         </div>
-          
+        
       </div>
+
+      
+
       
     </div>
   );

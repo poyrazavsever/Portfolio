@@ -5,6 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 14s ease-in-out infinite',
+      },
       colors: {
         bg: "#0A0A0A",
         primary:{
