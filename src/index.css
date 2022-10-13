@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+*{
+    font-family: 'Montserrat', sans-serif;
 
-@layer base{
+}
+
+@layer components{
+
     .icons{
-        @apply text-linear-100 font-semibold w-5 h-5;
+        @apply text-linear-100 font-semibold sm:w-5 sm:h-5 h-4 w-4 sm:text-base text-xs;
     }
+
+    .linear-text{
+        @apply bg-gradient-to-r from-linear-default to-linear-100 via-linear-200 text-transparent bg-clip-text w-full;  
+    }
+
+    .circleTranslate{
+        @apply text-primary-default w-8 h-8 absolute;
+    }
+
 }
