@@ -3,7 +3,7 @@ import { Bootstrap, Tailwind, ReactJS, Redux, Javascript, Html, Sass, Css, Flask
 
 function CircleSoftware() {
   return (
-    <div className='flex flex-col gap-y-5'>
+    <div className='flex flex-col gap-y-12'>
 
       <div className='w-[224px] h-[224px] lg:w-[270px] lg:h-[270px] my-12 rounded-full transition-all duration-200 flex items-center justify-center relative animate-[wiggle_25s_ease-in-out_infinite]'>
 

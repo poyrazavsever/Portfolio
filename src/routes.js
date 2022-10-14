@@ -1,7 +1,4 @@
-import About from "./views/About";
 import Home from "./views/Home";
-import Contact from "./views/Contact";
-import Portfolio from "./views/Portfolio";
 
 import WhoAmI from "./views/About/texts/whoamı";
 import Started from "./views/About/texts/started";
@@ -14,13 +11,9 @@ export const routes = [
     {
         path:"/",
         element:<Home />,
-    },
-    {
-        path:"/about", 
-        element: <About />,
         children: [
             {
-                path:"whoami",
+                path:"",
                 element:<WhoAmI />
             },
             {
@@ -41,13 +34,4 @@ export const routes = [
             },
         ]
     },
-    {
-        path:"/contact",
-        element: <Contact />
-    },
-    {
-        path:"/portfolio",
-        element: <Portfolio />
-    }
-
 ]

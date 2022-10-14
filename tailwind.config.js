@@ -11,8 +11,8 @@ module.exports = {
           '100%': { transform: 'rotate(360deg)' },
         },
         text: {
-          '0%': {opacity: "0", transform: "translateX(100%)"},
-          '100%' : {opacity : "100", transform: "translateX(0)"},
+          '0%': {opacity: "0"},
+          '100%' : {opacity : "100"},
         }
       },
       animation: {

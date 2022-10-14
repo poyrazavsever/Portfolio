@@ -1,7 +1,6 @@
 import {NavLink, useRoutes} from "react-router-dom"
 import {routes} from "./routes"
-import {Sun, LongLogo} from "./icons";
-import ChangeIcon from "./components/ChangeIcon";
+import {LongLogo} from "./icons";
 
 function App() {
 

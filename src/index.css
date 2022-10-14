@@ -28,6 +28,6 @@
         @apply border-l border-primary-200 py-2 pl-3 -m-px w-48;
     }
     .abouttext{
-        @apply text-sm sm:text-base w-3/5 mx-auto md:w-[400px] pb-5 text-white animate-[text_1s_ease-in-out_forwards]; 
+        @apply text-sm sm:text-base w-3/5 mx-auto md:w-[400px] md:h-[400px] pb-5 text-gray-300 animate-[text_.7s_ease-in-out_forwards] !leading-[1.6]; 
     }
 }
