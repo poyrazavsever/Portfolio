@@ -1,4 +1,4 @@
-import {useRoutes} from "react-router-dom"
+import {NavLink, useRoutes} from "react-router-dom"
 import {routes} from "./routes"
 import {Sun, LongLogo} from "./icons";
 import ChangeIcon from "./components/ChangeIcon";
@@ -12,20 +12,14 @@ function App() {
 
       <div className="container mx-auto">
 
-        <LongLogo className="w-32 ml-5"/>
+        <NavLink to="/" className="flex items-center justify-center gap-2">
+          <LongLogo className="w-32 ml-5"/>
+          <p className="text-sm linear-text">v1.0</p>
+        </NavLink>        
 
         {showRoutes}
 
-        <div className="flex gap-4 mt-5 absolute bottom-7 left-8 bg-bg">
-            <button className="icons">EN</button>
-            <ChangeIcon type="home"/>
-            <Sun className="icons" />
-        </div>
-        
       </div>
-
-      
-
       
     </div>
   );

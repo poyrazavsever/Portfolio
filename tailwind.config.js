@@ -9,10 +9,15 @@ module.exports = {
         wiggle: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        text: {
+          '0%': {opacity: "0", transform: "translateX(100%)"},
+          '100%' : {opacity : "100", transform: "translateX(0)"},
         }
       },
       animation: {
-        wiggle: 'wiggle 14s ease-in-out infinite',
+        wiggle: 'wiggle 20ss ease-in-out infinite',
+        text: "text 1s ease-in-out forwards"
       },
       colors: {
         bg: "#0A0A0A",
