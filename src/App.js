@@ -3,11 +3,19 @@ import {routes} from "./routes"
 import {LongLogo, AudioPlay, AudioStop, Sun, Moon} from "./icons";
 import {useAudio} from "./Hooks/useAudio"
 import { useState } from "react";
+import {useSelector, useDispatch } from "react-redux"
+import {changeLanguage} from "./counterSlice"
 
 function App() {
 
   const showRoutes = useRoutes(routes)
   const [playing, toggle] = useAudio("sound/music.mp3");
+
+
+  const count = useSelector((state) => state.counter.language)
+  const dispatch = useDispatch()
+
+  console.log(count)
  
   const [darkMode, setDarkMode] = useState(false)
 
@@ -23,7 +31,7 @@ function App() {
       <div className="container mx-auto">
 
         <NavLink to="/" className="flex items-center justify-center sticky top-0 gap-2 bg-bg dark:bg-slate-300 z-30 w-full">
-          <LongLogo className="w-32 ml-5 dark:text-primary-200"/>
+          <LongLogo className="w-48 ml-5 dark:text-primary-200"/>
           <p className="text-sm linear-text dark:text-primary-200">v1.0</p>
 
           <div className="flex items-center justify-center">
@@ -36,6 +44,11 @@ function App() {
 
             <button className={iconStyle} onClick={() => changeMode()}>
               {darkMode ? <Moon className="animate-[text_.2s_ease-in-out_forwards]"/> : <Sun className="animate-[text_.2s_ease-in-out_forwards]"/> }
+            </button>
+
+            <button onClick={() => dispatch(changeLanguage())}
+            className="text-linear-default dark:text-primary-200 w-6 dark:font-medium">
+              {count === "en" ? "EN" : "TR"}
             </button>
 
           </div>
