@@ -5,13 +5,13 @@ import {LongLogo} from "./icons";
 function App() {
 
   const showRoutes = useRoutes(routes)
-
+  
   return (
     <div className="h-screen w-full bg-bg overflow-x-hidden">
 
       <div className="container mx-auto">
 
-        <NavLink to="/" className="flex items-center justify-center gap-2">
+        <NavLink to="/" className="flex items-center justify-center gap-2 fixed bg-bg z-30 w-full">
           <LongLogo className="w-32 ml-5"/>
           <p className="text-sm linear-text">v1.0</p>
         </NavLink>        

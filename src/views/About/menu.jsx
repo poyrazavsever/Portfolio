@@ -5,9 +5,9 @@ import classNames from 'classnames'
 function Menu() {
 
   return (
-    <div className='flex flex-col md:flex-row justify-around items-start gap-12'>
+    <div className='flex flex-col md:flex-row justify-around items-start gap-12 mb-12'>
 
-      <div className='flex flex-col items-start text-xs md:text-base gap-y-7 font-semibold border-l border-primary-200 text-linear-default'>
+      <div className='w-full flex flex-col sm:items-start items-center justify-center text-xs md:text-base gap-y-7 font-semibold border-l border-primary-200 text-linear-default'>
 
         <NavLink to="" end={true} className={({ isActive }) => classNames({
           "aboutbtn": true,
