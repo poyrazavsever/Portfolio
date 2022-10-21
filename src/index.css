@@ -21,34 +21,18 @@
     }
 
     .circleTranslate{
-        @apply text-primary-default w-8 h-8 absolute sm:w-9 sm:h-9 lg:w-11 lg:h-11;
+        @apply text-primary-default transition-all duration-300 hover:w-10 hover:h-10 w-8 h-8 absolute sm:w-9 sm:h-9 lg:w-11 lg:h-11 animate-[wiggle_25s_ease-in-out_infinite_reverse];
     }
 
     .aboutbtn{
-        @apply border-l border-primary-200 py-2 pl-3 -m-px w-48;
+        @apply border-l border-primary-200 py-2 pl-3 -m-px w-48 dark:text-primary-200;
     }
     .abouttext{
-        @apply text-sm sm:text-base w-3/5 mx-auto md:w-[400px] md:h-[400px] pb-5 text-gray-300 animate-[text_.7s_ease-in-out_forwards] !leading-[1.6]; 
+        @apply text-sm sm:text-base w-3/5 mx-auto md:w-[400px] md:h-[400px] pb-5 text-gray-300 animate-[text_.7s_ease-in-out_forwards] !leading-[1.6] dark:text-black dark:font-medium; 
     }
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #0A0A0A;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(88, 88, 88);
-    transition: all .4s;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3A4A69;
+    width: 12px;
   }
