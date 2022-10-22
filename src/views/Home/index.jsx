@@ -13,7 +13,7 @@ function Home() {
         <title>Poyraz Avsever · Front-end Developer · UI/UX Designer </title>
       </Helmet>
 
-      <div className='w-full h-screen container flex flex-col md:flex-row justify-center  md:justify-around items-center gap-8'>
+      <div className='w-full h-screen container flex flex-col md:flex-row justify-center  md:justify-around items-center gap-16 sm:gap-8'>
         <LeftHome /> 
         <CircleSoftware />
       </div>

@@ -2,12 +2,16 @@ import React from 'react'
 import Carousel, { slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { ArrowLeft, ArrowRight } from "../icons"
+import {useSelector} from "react-redux"
 
 function Portfolio() {
+
+  const count = useSelector((state) => state.counter.language)
+
   return (
     <div className='h-screen w-full flex flex-col justify-center items-center gap-36 mb-32'>
 
-      <h1 className='linear-text font-medium text-3xl md:text-5xl text-center'>My <span className='text-primary-200'>Portfolio</span></h1>
+      <h1 className='linear-text font-medium text-3xl md:text-5xl text-center'>{count === "en" ? "My" : "Çalışmalarım"} <span className='text-primary-200'>{count === "en" ? "Portfolio" : ""}</span></h1>
 
 
       <Carousel

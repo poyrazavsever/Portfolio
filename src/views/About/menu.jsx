@@ -1,8 +1,11 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 import classNames from 'classnames'
+import {useSelector} from "react-redux"
 
 function Menu() {
+
+  const count = useSelector((state) => state.counter.language)
 
   return (
     <div className='flex flex-col md:flex-row justify-around items-start gap-12 mb-12'>
@@ -11,28 +14,28 @@ function Menu() {
 
         <NavLink to="" end={true} className={({ isActive }) => classNames({
           "aboutbtn": true,
-          "border-linear-200 border-l-2": isActive
-        })}>Who Am I?</NavLink>
+          "border-linear-200 dark:border-slate-800 border-l-2": isActive
+        })}>{count === "en" ? "Who Am I?" : "Ben Kimim?"}</NavLink>
 
         <NavLink to="started" end={true} className={({ isActive }) => classNames({
           "aboutbtn": true,
-          "border-linear-default border-l-2": isActive
-        })}>How I started software?</NavLink>
+          "border-linear-default dark:border-slate-800 border-l-2": isActive
+        })}>{count === "en" ? "How I started software?" : "Yazılıma nasıl başladım?"}</NavLink>
 
         <NavLink to="purpose" end={true} className={({ isActive }) => classNames({
           "aboutbtn": true,
-          "border-linear-default border-l-2": isActive
-        })}>What is my purpose?</NavLink>
+          "border-linear-default dark:border-slate-800 border-l-2": isActive
+        })}>{count === "en" ? "What is my purpose?" : "Amacım Ne?"}</NavLink>
 
         <NavLink to="whysoftware" end={true} className={({ isActive }) => classNames({
           "aboutbtn": true,
-          "border-linear-default border-l-2": isActive
-        })}>Why software?</NavLink>
+          "border-linear-default dark:border-slate-800 border-l-2": isActive
+        })}>{count === "en" ? "Why software?" : "Neden Yazılım?"}</NavLink>
 
         <NavLink to="learn" end={true} className={({ isActive }) => classNames({
           "aboutbtn": true,
-          "border-linear-default border-l-2": isActive
-        })}>How I Learn</NavLink>
+          "border-linear-default dark:border-slate-800 border-l-2": isActive
+        })}>{count === "en" ? "How I Learn" : "Nasıl Öğrenirim?"}</NavLink>
 
       </div>
 
