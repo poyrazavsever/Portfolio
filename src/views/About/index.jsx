@@ -9,7 +9,7 @@ function About() {
   const count = useSelector((state) => state.counter.language)
 
   return (
-    <div className='flex flex-col mx-auto h-screen w-full justify-center items-center gap-12 md:gap-24 relative mt-48 sm:mt-0'>
+    <div className='flex flex-col mx-auto h-screen w-full justify-center items-center gap-12 md:gap-24 relative mt-48 sm:mt-0' id='about'>
 
       <h1 className='linear-text font-medium text-3xl md:text-5xl text-center'>{count === "en" ? "About" : "Hakkımda"} <span className='text-primary-200'>{count === "en" ? "Me" : ""} </span></h1>
 

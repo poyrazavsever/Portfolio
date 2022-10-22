@@ -35,7 +35,7 @@ function Contact() {
 
     <div className='h-screen w-full'>
 
-      <h1 className='linear-text font-medium text-3xl md:text-5xl text-center'>{count === "en" ? "Contact" : "İletişim"}<span className='text-primary-200'>{count === "en" ? " Me" : ""}</span></h1>
+      <h1 className='linear-text font-medium text-3xl md:text-5xl text-center' id='contact'>{count === "en" ? "Contact" : "İletişim"}<span className='text-primary-200'>{count === "en" ? " Me" : ""}</span></h1>
 
 
       {
@@ -62,7 +62,7 @@ function Contact() {
         )
       }
 
-      <div className='flex sm:flex-row sm:items-start flex-col justify-center gap-24 items-center mt-8 sm:mt-24'>
+      <div className='flex sm:flex-row sm:items-start flex-col justify-center gap-24 items-center mt-8'>
 
         <form className='flex flex-col gap-7 items-start' ref={formRef} onSubmit={handleSubmit}>
 
@@ -119,7 +119,7 @@ function Contact() {
 
       </div>
 
-      <footer className='mt-24 pb-8 text-center'>
+      <footer className='mt-12 pb-12 sm:pb-0 text-center'>
         <p className="text-lg text-primary-default font-medium">{count === "en" ? "My" : ""} <span className='text-linear-100'>{count === "en" ? "Social Media" : "Sosyal Medya"}</span></p>
 
         <div className='text-primary-200 text-xl mt-3 flex items-center justify-center gap-5'>

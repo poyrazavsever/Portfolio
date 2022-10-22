@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import {useSelector} from "react-redux"
 
 function LeftHome() {
@@ -17,9 +17,9 @@ function LeftHome() {
 
         <div className='flex items-center justify-center gap-4'>
 
-          <Link to="/about" className='rounded-sm px-5 py-2 bg-primary-default text-white transition-all duration-200 hover:bg-gradient-none hover:bg-primary-200 text-xs sm:text-sm'>{count === "en" ? "Get to know him" : "Onu Tanı"}</Link>
+          <a href="#about" className='rounded-sm px-5 py-2 bg-primary-default text-white transition-all duration-200 hover:bg-gradient-none hover:bg-primary-200 text-xs sm:text-sm'>{count === "en" ? "Get to know him" : "Onu Tanı"}</a>
 
-          <Link to="/about" className='rounded-sm px-5 py-2 bg-primary-default text-white transition-all duration-200 hover:bg-gradient-none hover:bg-primary-200 text-xs sm:text-sm'>{count === "en" ? "Contact Me" : "İletişim"}</Link>
+          <a href="#contact" className='rounded-sm px-5 py-2 bg-primary-default text-white transition-all duration-200 hover:bg-gradient-none hover:bg-primary-200 text-xs sm:text-sm'>{count === "en" ? "Contact Me" : "İletişim"}</a>
           
         </div>
       </div>

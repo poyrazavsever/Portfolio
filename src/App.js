@@ -1,8 +1,8 @@
-import {NavLink, useRoutes} from "react-router-dom"
+import {NavLink, useFetcher, useRoutes} from "react-router-dom"
 import {routes} from "./routes"
 import {LongLogo, AudioPlay, AudioStop, Sun, Moon} from "./icons";
 import {useAudio} from "./Hooks/useAudio"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {useSelector, useDispatch } from "react-redux"
 import {changeLanguage} from "./counterSlice"
 
@@ -10,7 +10,6 @@ function App() {
 
   const showRoutes = useRoutes(routes)
   const [playing, toggle] = useAudio("sound/music.mp3");
-
 
   const count = useSelector((state) => state.counter.language)
   const dispatch = useDispatch()
@@ -24,7 +23,7 @@ function App() {
   const iconStyle = "text-linear-default text-xl mr-5 dark:text-primary-200"
 
   return (
-    <div className={`h-screen w-full bg-bg ${darkMode? `dark !bg-slate-300` : ``} overflow-x-hidden dark:`}>
+    <div className={`h-screen w-full bg-bg ${darkMode? `dark !bg-slate-300` : ``} overflow-x-hidden scroll-smooth`}>
 
       <div className="container mx-auto">
 
