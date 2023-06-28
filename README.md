@@ -33,4 +33,4 @@ In this project, I focused on front-end technologies and aimed to gain experienc
 
 <br>
 
-### Demo : https://react-tailwind-portfolio-git-master-poyrazavsever.vercel.app/
+### Demo : https://react-tailwind-portfolio-qzvp8aypj-poyrazavsever.vercel.app/
